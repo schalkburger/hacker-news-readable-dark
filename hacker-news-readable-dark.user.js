@@ -6,6 +6,9 @@
         color: #b2b6b9 !important;
     }
 
+    img {
+        filter: grayscale(1);
+    }
 
     table#hnmain {
         max-width: 700px;
@@ -20,12 +23,8 @@
         color: #b2b6b9 !important;
     }
 
-    img {
-        filter: grayscale(1);
-    }
-
     .title a {
-        font-size: 12pt;
+        font-size: 13pt;
         color: #b2b6b9 !important;
         line-height: 1.4;
         font-weight: 500;
@@ -38,8 +37,13 @@
         color: #4c5053 !important;
     }
 
+    span.sitebit.comhead a > span {
+        color: #545454 !important;
+        font-size: 10pt;
+    }
+
     .subtext a {
-        color: #606060 !important;
+        color: #6d6d6d !important;
     }
 
     tr.spacer {
@@ -49,7 +53,7 @@
 
     tr.athing td {
         padding-top: 20px;
-        border-top: 1px solid #1f1f1f;
+        border-top: 1px solid #232323;
     }
 
     td.subtext {
@@ -58,8 +62,9 @@
 
     .comment-tree .comment,
     .fatitem .comment {
-        font-size: 10pt;
-        line-height: 20pt;
+        font-family: Georgia, Times, Times New Roman, serif;
+        font-size: 12pt;
+        line-height: 22pt;
     }
 
     .fatitem {
@@ -75,6 +80,6 @@
     }
 
     .comment .c00 {
-        color: #dddddd !important;
+        color: #fff !important;
     }
 }
