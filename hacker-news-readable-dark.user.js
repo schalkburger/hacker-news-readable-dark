@@ -17,6 +17,15 @@
 
     td {
         background-color: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+        background-color: transparent;
+        color: #b2b6b9 !important;
+        font-size: 12pt;
+        line-height: 22pt;
+    }
+
+    textarea, input {
+        background: #ccc;
     }
 
     .title {
@@ -42,7 +51,7 @@
         font-size: 10pt;
     }
 
-    .subtext a {
+    .subtext, .subtext a, .subtext .score, .subtext .age a {
         color: #6d6d6d !important;
     }
 
@@ -56,15 +65,19 @@
         border-top: 1px solid #232323;
     }
 
+    tr.athing.comtr td * td {
+        border-top: none;
+        padding-bottom: 20px;
+    }
+
     td.subtext {
         padding-top: 8px;
     }
 
     .comment-tree .comment,
     .fatitem .comment {
-        font-family: Georgia, Times, Times New Roman, serif;
-        font-size: 12pt;
-        line-height: 22pt;
+        font-size: 10pt;
+        line-height: 20pt;
     }
 
     .fatitem {
@@ -80,6 +93,14 @@
     }
 
     .comment .c00 {
+        color: #b2b6b9 !important;
+    }
+
+    .pagetop a:visited {
+        color: #fff !important;
+    }
+
+    .fatitem .title a:visited {
         color: #fff !important;
     }
 }
