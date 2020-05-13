@@ -1,9 +1,19 @@
 @-moz-document url-prefix("https://news.ycombinator.com/") {
+
+    /* Globals  */
+
     body,
-    .title {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    textarea,
+    input {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         background: #141414 !important;
         color: #b2b6b9 !important;
+    }
+    a:link {
+        color: #b2b6b9 !important;
+    }
+    a:visited {
+        color: #4c5053 !important;
     }
 
     img {
@@ -11,25 +21,36 @@
     }
 
     table#hnmain {
+        margin-top: 20px;
         max-width: 700px;
         background-color: rgba(125, 124, 124, 0);
     }
 
     td {
-        background-color: transparent;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
-        background-color: transparent;
-        color: #b2b6b9 !important;
         font-size: 12pt;
-        line-height: 22pt;
+        line-height: 16pt;
     }
 
-    textarea, input {
-        background: #ccc;
+    textarea,
+    input {
+        padding: 10px;
+        border: 2px solid #2b2b2b;
     }
+
+    .pagetop a:visited {
+        color: #fff !important;
+    }
+
+    td[bgcolor='#ff6600'] {
+        background-color: transparent !important;
+    }
+
+    /* Main News Feed   */
 
     .title {
         color: #b2b6b9 !important;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .title a {
@@ -39,30 +60,30 @@
         font-weight: 500;
     }
 
-    a:link {
-        color: #b2b6b9 !important;
-    }
-    a:visited {
-        color: #4c5053 !important;
-    }
-
     span.sitebit.comhead a > span {
         color: #545454 !important;
         font-size: 10pt;
     }
 
-    .subtext, .subtext a, .subtext .score, .subtext .age a {
+    .subtext,
+    .subtext a,
+    .subtext .score,
+    .subtext .age a {
         color: #6d6d6d !important;
     }
 
+    .subtext {
+        padding-left: 10px;
+    }
+
     tr.spacer {
-        height: 20px !important;
-        box-shadow: 0px 1px 0 0px #ececec;
+        height: 2px !important;
+        background-color: rgba(0, 0, 0, 0) !important;
     }
 
     tr.athing td {
         padding-top: 20px;
-        border-top: 1px solid #232323;
+        border-top: none;
     }
 
     tr.athing.comtr td * td {
@@ -71,8 +92,10 @@
     }
 
     td.subtext {
-        padding-top: 8px;
+        padding-top: 0;
     }
+
+    /* Comments */
 
     .comment-tree .comment,
     .fatitem .comment {
@@ -80,11 +103,16 @@
         line-height: 20pt;
     }
 
+    .comment-tree .comment {
+        background-color: #1b1b1b;
+        padding: 40px;
+    }
+
     .fatitem {
         background: #fff0;
         width: 100%;
         padding: 0 0 20px 0;
-        border-bottom: 2px solid #ccc;
+        border-bottom: 2px solid #2b2b2b;
     }
 
     .fatitem .comment {
@@ -96,11 +124,8 @@
         color: #b2b6b9 !important;
     }
 
-    .pagetop a:visited {
-        color: #fff !important;
-    }
-
     .fatitem .title a:visited {
         color: #fff !important;
     }
+
 }
