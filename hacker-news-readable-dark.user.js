@@ -57,7 +57,7 @@
 
     .title a {
         font-size: 13pt;
-        color: #b2b6b9 !important;
+        color: #b2b6b9;
         line-height: 1.4;
         font-weight: 500;
     }
