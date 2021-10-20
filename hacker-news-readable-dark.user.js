@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name           Hacker News Readable Dark Striped
-@namespace      https://github.com/schalkburger/hacker-news-readable-dark/tree/striped
+@name           Hacker News Readable Dark Serendipity
+@namespace      https://github.com/schalkburger/hacker-news-readable-dark/tree/serendipity
 @version        1.0.0
-@description    A more readable, dark version of Hacker News inspired by Instapaper.
+@description    A more readable, dark version of Hacker News inspired by Serendipity VSCode Theme
 @author         Schalk Burger
 ==/UserStyle== */
 @-moz-document domain("news.ycombinator.com") {
@@ -19,7 +19,7 @@
     input {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
         Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-        background: #141414 !important;
+        background: #232834 !important;
         color: #b2b6b9 !important;
     }
 
@@ -117,16 +117,16 @@
     }
 
     .itemlist tbody tr:nth-of-type(1n + 1):nth-child(2n-1) td {
-        background-color: #1b1b1b !important;
+        background-color: #1f2430 !important;
     }
 
     .itemlist tbody tr.athing:nth-of-type(2n) + tr td {
-        background-color: #141414 !important;
+        background-color: #232834 !important;
         padding-bottom: 20px;
     }
 
     .itemlist tbody tr.athing:nth-of-type(2n-1) + tr td {
-        background-color: #1b1b1b !important;
+        background-color: #1f2430 !important;
         padding-bottom: 20px;
     }
 
@@ -139,7 +139,7 @@
     }
 
     .comment-tree .comment {
-        background-color: #1b1b1b;
+        background-color: #1f2430;
         padding: 40px;
         box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
         0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
