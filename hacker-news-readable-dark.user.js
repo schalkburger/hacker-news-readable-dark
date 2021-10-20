@@ -1,6 +1,18 @@
+/* ==UserStyle==
+@name           Hacker News Readable Dark Striped
+@namespace      https://github.com/schalkburger/hacker-news-readable-dark/tree/striped
+@version        1.0.0
+@description    A more readable, dark version of Hacker News inspired by Instapaper.
+@author         Schalk Burger
+==/UserStyle== */
+@-moz-document domain("news.ycombinator.com") {
+	*,
+	*::before,
+	*::after {
+	  box-sizing: border-box;
+	}
+}
 @-moz-document url-prefix("https://news.ycombinator.com/") {
-
-    /* Globals  */
 
     body,
     textarea,
