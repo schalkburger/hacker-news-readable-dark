@@ -14,20 +14,38 @@
 }
 @-moz-document url-prefix("https://news.ycombinator.com/") {
 
+    :root {
+        --color-raisinblack: #232834;
+        --color-ebonyclay: #1f2430;
+        --color-timberwolf: #cbccc6;
+        --color-lightsalmon: #f29e74;
+        --color-cyclamen: #f06897;
+        --color-mauve: #d4bfff;
+        --color-celeste: #9ef0f0;
+        --color-lightskyblue: #73d0ff;
+        --color-frenchskyblue: #78a9ff;
+        --color-bluegreen: #519aba;
+        --color-manatee: #8c94a3;
+        --color-white: #ffffff;
+        --color-charcoal: #333b4e;
+        --color-darkgunmental: #191e2a;
+        --color-davysgrey: #4f535e;
+    }
+
     body,
     textarea,
     input {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
         Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-        background: #232834 !important;
-        color: #b2b6b9 !important;
+        background: var(--color-raisinblack) !important;
+        color: var(--color-timberwolf) !important;
     }
 
     a:link {
-        color: #b2b6b9 !important;
+        color: var(--color-timberwolf) !important;
     }
     a:visited {
-        color: #4c5053 !important;
+        color: var(--color-davysgrey) !important;
     }
 
     img {
@@ -62,14 +80,14 @@
     /* Main News Feed  */
 
     .title {
-        color: #b2b6b9 !important;
+        color: var(--color-timberwolf) !important;
         padding-left: 10px;
         padding-right: 10px;
     }
 
     .title a {
         font-size: 13pt;
-        color: #b2b6b9;
+        color: var(--color-timberwolf);
         line-height: 1.4;
         font-weight: 500;
     }
@@ -95,12 +113,12 @@
         background-color: rgba(0, 0, 0, 0) !important;
     }
 
-    tr.spacer:nth-child(2n + 1) {
+    /* tr.spacer:nth-child(2n + 1) {
         box-shadow: 0 1.7px 1.4px rgba(0, 0, 0, 0.112),
         0 4px 3.3px rgba(0, 0, 0, 0.162), 0 7.5px 6.3px rgba(0, 0, 0, 0.2),
         0 13.4px 11.2px rgba(0, 0, 0, 0.238), 0 25.1px 20.9px rgba(0, 0, 0, 0.288),
         0 60px 50px rgba(0, 0, 0, 0.4);
-    }
+    } */
 
     tr.athing td {
         padding-top: 20px;
@@ -121,7 +139,7 @@
     }
 
     .itemlist tbody tr.athing:nth-of-type(2n) + tr td {
-        background-color: #232834 !important;
+        background-color: var(--color-raisinblack) !important;
         padding-bottom: 20px;
     }
 
@@ -164,7 +182,7 @@
     }
 
     .comment .c00 {
-        color: #b2b6b9 !important;
+        color: var(--color-timberwolf) !important;
     }
 
     .fatitem .title a:visited {
