@@ -66,7 +66,8 @@
     textarea,
     input {
         padding: 10px;
-        border: 2px solid #2b2b2b;
+        border: 1px solid var(--color-davysgrey);
+        background: var(--color-darkgunmental) !important;
     }
 
     .pagetop a:visited {
@@ -93,7 +94,7 @@
     }
 
     span.sitebit.comhead a > span {
-        color: #545454 !important;
+        color: var(--color-manatee) !important;
         font-size: 10pt;
     }
 
@@ -101,7 +102,7 @@
     .subtext a,
     .subtext .score,
     .subtext .age a {
-        color: #6d6d6d !important;
+        color: #7a7b7e !important;
     }
 
     .subtext {
@@ -166,14 +167,14 @@
     }
 
     tr.athing:nth-child(even) td .comment {
-        background-color: #252525;
+        background-color: var(--color-darkgunmental);
     }
 
     .fatitem {
         background: #fff0;
         width: 100%;
         padding: 0 0 20px 0;
-        border-bottom: 2px solid #2b2b2b;
+        border-bottom: 2px solid var(--color-davysgrey);
     }
 
     .fatitem .comment {
