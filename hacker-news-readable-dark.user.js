@@ -3,7 +3,7 @@
 // @namespace    https://greasyfork.org/en/users/961305-darkharden
 // @include      https://news.ycombinator.com/*
 // @match        https://news.ycombinator.com/*
-// @version      2.0.9
+// @version      2.0.10
 // @author       Schalk Burger <schalkb@gmail.com>
 // @description  Hacker News Readable Dark
 // @license MIT
@@ -11,6 +11,7 @@
 
 // To-do
 // Add click event listener that opens links and comments
+// Find nearest .age a link
 
 (function () {
     "use strict";
@@ -23,14 +24,16 @@
         const titleLink = titleLinks[i];
         titleLink.setAttribute("target", "_blank");
         // console.log("titleLink:", titleLink);
+        const commentLinks = document.querySelectorAll(".age a");
+        for (let i = 0; i < commentLinks.length; i++) {
+            const commentLink = commentLinks[i];
+            console.log("commentLink", commentLink.href)
+        }
+
         // Open link + comments with one click
-        titleLink.addEventListener("click", (e) => {
-            e.preventDefault();
+        titleLink.addEventListener("click", function () {
             console.log("Hacker News link clicked");
-            function openLinkAndComments() {
-                console.log("openLinkAndComments function ran")
-            }
-            setTimeout(openLinkAndComments, 100);
+            // window.open("https://cnn.com");
         });
     }
 
