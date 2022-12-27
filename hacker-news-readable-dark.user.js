@@ -27,19 +27,31 @@
         for (let i = 0; i < titleLineLinks.length; i++) {
             const titleLineLink = titleLineLinks[i];
             titleLineLink.setAttribute("target", "_blank");
-            const titleLinkLinkHref = titleLineLink.href;
-            console.log("titleLinkLinkHref", titleLinkLinkHref)
         }
+        // Get link
         // Get comments ID
         const aThingID = aThing.id;
         const linkCommentSpan = document.createElement("td");
         linkCommentSpan.setAttribute("id", aThingID);
         linkCommentSpan.className = "link-comment-td";
-        linkCommentSpan.innerHTML = `<a href="" comments-id="${aThingID}" target="_blank" class="link-comment">[L+C]</a>`;
+        linkCommentSpan.innerHTML = `<a href="${aThingID}" comments-id="${aThingID}" target="_blank" class="link-comment">[L+C]</a>`;
         aThing.append(linkCommentSpan);
-        // Get news link
     }
 
+    const titleLineHrefs = document.querySelectorAll(".titleline > a");
+    // var downloadLinks = document.querySelectorAll('[href*="/Download"]');
+    var hrefsArray = []; // create an Array to save hrefs
+    var j = 0;
+    for (; j < titleLineHrefs.length; j++) {
+        hrefsArray.push(titleLineHrefs[j].href); // push hrefs in array
+    }
+    // console.log(hrefsArray);
+    //
+    const newsLinks = document.querySelectorAll(".link-comment-td a");
+    for (let i = 0; i < newsLinks.length; i++) {
+        const newsLink = newsLinks[i];
+        newsLink.setAttribute("href", hrefsArray[i])
+    }
 
     // singleClickLinks
     const singleClickLinks = document.querySelectorAll(".link-comment-td a");
@@ -47,13 +59,14 @@
         const singleClickLink = singleClickLinks[i];
         const singleClickLinkCommentsID = singleClickLink.getAttribute("comments-id");
         const singleClickLinkCommentsIDLink = `https://news.ycombinator.com/item?id=${singleClickLinkCommentsID}`
-        const singleClickLinkNewsLink = singleClickLink.getAttribute("link");
+        const singleClickLinkNewsLink = singleClickLink.getAttribute("href");
         singleClickLink.addEventListener('click', function (e) {
             e.preventDefault();
-            console.log("singleClickLink clicked")
-            console.log("singleClickLinkCommentsIDLink", singleClickLinkCommentsIDLink)
+            // console.log("singleClickLink clicked")
+            // console.log("singleClickLinkCommentsIDLink", singleClickLinkCommentsIDLink)
+            // console.log("singleClickLinkNewsLink", singleClickLinkNewsLink)
             window.open(singleClickLinkCommentsIDLink)
-            console.log("singleClickLinkNewsLink", singleClickLinkNewsLink)
+            window.open(singleClickLinkNewsLink)
         });
     }
 })();
