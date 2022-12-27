@@ -34,7 +34,7 @@
         const linkCommentSpan = document.createElement("td");
         linkCommentSpan.setAttribute("id", aThingID);
         linkCommentSpan.className = "link-comment-td";
-        linkCommentSpan.innerHTML = `<a href="${aThingID}" comments-id="${aThingID}" target="_blank" class="link-comment">[L+C]</a>`;
+        linkCommentSpan.innerHTML = `<a href="${aThingID}" comments-id="${aThingID}" target="_blank" class="link-comment">[l+c]</a>`;
         aThing.append(linkCommentSpan);
     }
 
