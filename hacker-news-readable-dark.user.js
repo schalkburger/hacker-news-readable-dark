@@ -3,14 +3,11 @@
 // @namespace    https://greasyfork.org/en/users/961305-darkharden
 // @include      https://news.ycombinator.com/*
 // @match        https://news.ycombinator.com/*
-// @version      2.0.15
+// @version      2.0.16
 // @author       Schalk Burger <schalkb@gmail.com>
 // @description  Hacker News Readable Dark
 // @license MIT
 // ==/UserScript==
-
-// To-do
-// Add click event listener that opens links and comments
 
 (function () {
     "use strict";
@@ -28,15 +25,27 @@
             const titleLineLink = titleLineLinks[i];
             titleLineLink.setAttribute("target", "_blank");
         }
-        // Get link
-        // Get comments ID
-        const aThingID = aThing.id;
-        const linkCommentSpan = document.createElement("td");
-        linkCommentSpan.setAttribute("id", aThingID);
-        linkCommentSpan.className = "link-comment-td";
-        linkCommentSpan.innerHTML = `<a href="${aThingID}" comments-id="${aThingID}" target="_blank" class="link-comment">[l+c]</a>`;
-        aThing.append(linkCommentSpan);
     }
+
+    const aThingNewsLinks = document.querySelectorAll(".news-link + tr .subline");
+    for (let i = 0; i < aThingNewsLinks.length; i++) {
+        // const aThingNewsLink = aThingNewsLinks[i];
+        const sublineLinksArray = [];
+        var k = 0;
+        for (; k < aThingNewsLinks.length; k++) {
+            sublineLinksArray.push(aThingNewsLinks[k]); // push hrefs in array
+        }
+        console.log("sublineLinksArray", sublineLinksArray)
+        // Get comments ID
+        // const aThingNewsLinkID = aThingNewsLink.id;
+        // // Create link + comments anchor
+        // const linkCommentSpan = document.createElement("span");
+        // linkCommentSpan.setAttribute("id", aThingNewsLinkID);
+        // linkCommentSpan.className = "link-comment-td";
+        // linkCommentSpan.innerHTML = `<a href="${aThingNewsLinkID}" comments-id="${aThingNewsLinkID}" target="_blank" class="link-comment">[l+c]</a>`;
+        // aThingNewsLink.append(linkCommentSpan);
+    }
+
 
     const titleLineHrefs = document.querySelectorAll(".titleline > a");
     // var downloadLinks = document.querySelectorAll('[href*="/Download"]');
