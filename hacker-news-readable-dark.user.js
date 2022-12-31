@@ -36,6 +36,12 @@
         linkCommentSpan.className = "link-comment-td";
         linkCommentSpan.innerHTML = `<a href="${aThingID}" comments-id="${aThingID}" target="_blank" class="link-comment">[l+c]</a>`;
         aThing.append(linkCommentSpan);
+        // linkCommentSpanAnchors
+        const linkCommentSpanAnchors = document.querySelectorAll(".link-comment");
+        for (let i = 0; i < linkCommentSpanAnchors.length; i++) {
+            const linkCommentSpanAnchor = linkCommentSpanAnchors[i];
+            linkCommentSpanAnchor.setAttribute("style", "padding: 10px;")
+        }
     }
 
     const titleLineHrefs = document.querySelectorAll(".titleline > a");
